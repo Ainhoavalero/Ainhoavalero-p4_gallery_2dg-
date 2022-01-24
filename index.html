@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La imatge de la música</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,800;1,400&family=Roboto:ital,wght@0,300;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 32px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        a{
+            text-decoration: none;
+            font-family: var(--andanapro);
+            text-transform: uppercase;
+            color: var(--beige);
+        }
+        :root{
+            --beige:#fff0f0;
+            --roig:#ff3939;
+            --negre: #000000;
+        }
+        .container{
+            padding: 0 2em;
+        }
+        body>header{
+            display: flex;
+            padding: 50px 0;
+            text-align: center;
+            height: 100vh;
+            background-color: var(--negre);
+        }
+        header .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        hgroup{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
+        h1{
+            font-size: 2.5em;
+            margin: 0 0 2em 0;
+            font-family: 'Roboto', sans-serif;
+            font-weight: var(--negrita);
+            color: var(--beige);
+            justify-content: center;
+        }
+        h2{
+            font-size: 1.6em;
+            font-family: 'Andada Pro',100;
+            color: var(--beige);
+            width: 50%;
+            justify-content: center;
+        }
+        h3{
+            font-size: 0.8em;
+            font-family: 'Andada Pro', serif;
+            color: var(--negre);
+            justify-content: center;
+            align-items: center;
+        }
+        nav{
+            display: flex;
+            padding: 1em 3em;
+            width: 100%;
+            justify-content: space-between;
+            color:var(--roig);
+        }
+        nav a{
+            font-size: 0.75em;
+        }
+        section:first-child .container{
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: var(--roig);
+            color: white;
+        }
+        section:last-child .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /*CARD PORTADES*/
+        .cover{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: top center;
+            flex-grow: 1;
+            width: 300px;
+            min-width: 300px;
+            min-height: 300px;
+            height: 300px;
+            padding: 0.5em;
+            margin: 0.5em;
+            flex-wrap: wrap;
+            
+        }
+        .cover .cover_img{
+            display: flex;
+            width: 100%;
+            height: 200px;
+        }
+        .cover .cover_img img{
+            object-fit: cover;
+            object-position: bottom;
+        }
+        .cover header{
+            width: 100%;
+            display: flex;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+        .cover h3{
+            font-family: 'Andada Pro', serif;
+            font-size: 0.7em;
+            color: var(--beige);
+        }
+        /*CARD DESIGNERS*/
+        .card_designers{
+            margin: 1em;
+            padding: 0.75em;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            align-items: center;
+            width: 300px;
+            box-shadow: var(--beige) 0px 0px 7px;
+        }
+        .designers_img{
+            width: 250px;
+            height: 250px;
+        }
+        .designers_img img{
+            border-radius: 250px;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .card_designers header{
+            margin: 0.75em 0 0 0;
+            text-align: center;
+        }
+
+        section:last-child{
+            height: 100%;
+            background-color: var(--gris);
+            color: var(--blau);
+        }
+        footer{
+            height: 50vh;
+            background-color: var(--roig);
+            color: var(--negre);
+        }
+        footer .container{
+            display: flex;
+        }
+        footer p{
+            width: 17%;
+            
+        }
+        footer p:last-child{
+            margin-left: 34%;
+            background-color: var(--beige);
+        }
+
+        footer p a{
+            font-family: var(--opensans);
+            text-transform: capitalize;
+            font-size: 0.75em;
+        }
+
+
+        /* @media (max-width:550px){
+            html{
+                font-size:20px;
+            }
+            h1{
+                color:green;
+            }
+            section:first-child .container{
+                flex-direction: column;
+            }
+            .cover{
+                display: flex;
+                align-items: center;
+                width: 500px;
+                height: 450px;
+                background-color: crimson;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-grow: 1;
+            }
+            .cover_img{
+                padding: 0;
+                width: 100%;
+                height: 300px;
+                align-items: center;
+                justify-content: flex-start;
+                background-color: darkgoldenrod;
+            }
+            .cover_img img{
+                height: 250px;
+                object-fit: cover;
+                object-position: center center;
+            }
+            .cover header{
+                display: flex;
+                width: 50%;
+                height: 100%;
+                flex-direction:column;
+                justify-content: center;
+                align-items: center;
+            }
+            .cover header h3{
+                font-size: 1.5em;
+                text-align: center;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <hgroup>
+                <h1>The image of music</h1>
+                <h2>Graphic collection of designs and designers that give image to sounds</h2>
+            </hgroup>
+            <nav>
+                <a href="#covers">covers</a>
+                <a href="#designers">designers</a>
+                <a href="#social network">social networks</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+            <section id="#covers">
+                <h3>Covers</h3>
+                <div class="container">
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/portadas/1.jfif" alt="">
+                        </div>
+                        <header>
+                            <h3>Juanes</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/portadas/2.jpg" alt="">
+                        </div>
+                        <header>
+                            <h3>Pablo Alborán</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/portadas/3.jfif" alt="">
+                        </div>
+                        <header>
+                            <h3>Jacobo Serra</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/portadas/4.jfif" alt="">
+                        </div>
+                        <header>
+                            <h3>The Beatles</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/portadas/5.jfif" alt="">
+                        </div>
+                        <header>
+                            <h3>Mantra</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/portadas/6.jpg" alt="">
+                        </div>
+                        <header>
+                            <h3>Mantra</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/portadas/7.jpg" alt="">
+                        </div>
+                        <header>
+                            <h3>Mantra</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/portadas/8.jfif" alt="">
+                        </div>
+                        <header>
+                            <h3>Mantra</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/portadas/9.jfif" alt="">
+                        </div>
+                        <header>
+                            <h3>Mantra</h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/portadas/10.jfif" alt="">
+                        </div>
+                        <header>
+                            <h3>Mantra</h3>
+                        </header>
+                    </div>
+                    
+            </section>
+            <section id="#designers">
+                <h3>Designers</h3>
+                <div class="container">
+                    <div class="card_designers">
+                        <div class="designers_img">
+                            <img src="img/designers/R.jfif">
+                        </div>
+                        <header>
+                            <h3>Paul Rand</h3>
+                            <blockquote>
+                                “Everything is design. Everything!” “You will learn most things by looking, but reading gives understanding. Reading will make you free.”
+                            </blockquote>
+                        </header>
+                    </div>
+                    <div class="card_designers">
+                        <div class="designers_img">
+                            <img src="img/designers/Paula_Scher.jpg">
+                        </div>
+                        <header>
+                            <h3>Paula Scher</h3>
+                            <blockquote>
+                                An important influence in his work is Dali, he also has a lot of participation in pop culture and the use of colors in his pieces.
+                            </blockquote>
+                        </header>
+                    </div>
+                    <div class="card_designers">
+                        <div class="designers_img">
+                            <img src="img/designers/jessica-walsh-final-2019.jpg">
+                        </div>
+                        <header>
+                            <h3>Jessica Wals</h3>
+                            <blockquote>
+                                “Everything is design. Everything!” “You will learn most things by looking, but reading gives understanding. Reading will make you free.”
+                            </blockquote>
+                        </header>
+                    </div>
+                </div>
+            </section>
+        
+    </main>
+    <footer id="#social nedwork">
+            <h3>social nedwork</h3>
+            <div class="container">
+                <p><a href="#">Twitter</a></p>
+                <p><a href="#">Instagram</a></p>
+                <p><a href="#">Facebook</a></p>
+                <p><a href="#">E-mail</a></p>
+            </div>
+    </footer>
+</body>
+</html>
